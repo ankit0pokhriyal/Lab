@@ -13,7 +13,7 @@ void FindGreatestNumber(int arr[], int n)
                 break;
             }
         }
-        printf("%d --> %d/n", arr[i], check);
+        printf("%d --> %d\n", arr[i], check);
     }
 }
 int main()
