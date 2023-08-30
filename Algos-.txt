@@ -1,0 +1,291 @@
+ Algos:-
+
+# SINGLE LINKED LIST:-
+
+# Transversing A linked List
+
+ Step 1:[Initalize] SET PTR = START
+ step 2: Repeat step 3 & 4 while PTR != NULL
+ step 3:                      Apply Process to PTR-> DATA
+ step 4:                      SET PTR = PTR->NEXT
+ Step 5: EXIT
+
+# Algorithm to count the NO. of Nodes in Linked List
+
+ step 1: [Initialize] SET COUNT = 0
+ step 2: [Initialize] SET PTR = START
+ Step 3: Repeat step 4 & 5 while PTR != NULL
+ step 4:                   SET  COUNT = COUNT + 1
+ step 5:                   SET  PTR = PTR-> NEXT
+ step 6: Write COUNT
+ step 7: EXIT
+
+# ALgorithm to Search a linked List
+
+ step 1: [Initialize] SET PTR =START
+ step 2: Repeat Step 3 while PTR != NULL
+ step 3:     IF VAL = PTR->DATA
+                   SET POS = PTR
+                   step 5
+             ELSE
+                   SET PTR = PTR->NEXT
+ step 4: SET POS = NULL
+ step 5: EXIT
+
+# Insertion
+
+1. Algorithm to insert a new node at the begining in Linked List.
+
+ step 1: AVAIL = NULL
+         Print OVERFLOW
+         step 7
+ step 2: SET NEW_NODE = AVAIL
+ step 3: SET AVAIL = AVAIL->NEXT
+ step 4: SET NEW_NODE-> DATA = VAL
+ step 5: SET NEW_NODE-> NEXT = START
+ step 6: SET START = NEW_NODE
+ step 7: EXit 
+
+2. Algorithm to insert a new node at end in Linked List.
+
+step 1: If AVAIL =NULL
+           print OVERFLOW
+           Step 10
+step 2: SET NEW_NODE = AVAIL
+step 3: SET AVAIL = AVAIL->NEXT
+step 4: SET NEW_NODE-> DATA = VAL
+step 5: SET NEW_NODE-> NEXT = NULL
+step 6: SET PTR = START
+step 7: While PTR->NEXT != NULL
+step 8:       SET PTR = PTR->NEXT
+step 9: SET PTR->NEXT = NEW_NODE
+step 10: Exit
+
+3. Algoirtihm to insert a new node after a Given Node in Linked List
+
+step 1: If AVAIL =NULL
+           print OVERFLOW
+           step 12
+step 2: SET NEW_NODE = AVAIL
+step 3: SET AVAIl = AVAIL->NEXT
+step 4: SET NEW_NODE->DATA = VAl
+step 5: SET PTR = START
+step 6: SET PREPTR = PTR
+step 7: While PREPTR->DATA != NUM
+step 8:       SET PREPTR = PTR
+step 9:       SET PTR = PTR-> NEXT
+step 10: PREPTR -> NEXT = NEW NODE
+step 11: SET NEW_NODE->NEXT = PTR
+step 12: EXIT
+
+4. Algorithm to insert a new node before a Given Node in Linked List
+
+step 1: If AVAIL = NULL
+           print OVERFLOW
+           step 12
+step 2: SET NEW_NODE = AVAIL
+step 3: SET AVAIL = AVAIL->NEXT
+step 4: SET NEW_NODE -> DATA = VAL
+step 5: SET PTR = START
+step 6: SET PREPTR = PTR
+step 7: While PTR->DATA != NUM
+step 8:       SET PREPTR = PTR
+step 9:       SET PTR = PTR -> NEXT
+step 10: PREPTR -> NEXT = NEW_NODE
+step 11: SET NEW_NODE->NEXT = PTR
+step 12: EXIT
+
+# Deletion
+
+1. First Node Deletion in Linked List:-
+
+step 1: If START = NULL
+           Wirte UNDERFLOW
+           STEP 5
+step 2: SET PTR= START
+step 3: SET START = START->NEXT
+step 4: FREE PTR
+step 5: EXIT
+
+2. Delete the Last Node in Linked List:-
+
+step 1: IF START = NULL
+           Write UNDERFLOW
+step 2: SET PTR = START
+step 3: while PTR-> NEXT != NULL
+              SET PREPTR = PTR
+              SET PTR = PTR->NEXT
+step 4: SET PREPTR->NEXT = NULL
+step 5: FREE PTR
+step 6: EXIT
+
+3. Algorithm to delete the node after a given node
+
+step 1: If START = NULL
+            Write UNDERFLOW
+            STEP 10
+step 2: SET PTR = START
+step 3: SET PREPTR = PTR
+step 4: WHILE PREPTR-> DATA! = NUM
+step 5:      SET PREPTR = PTR
+step 6:      SET PTR =PTR->NEXT
+step 7: SET TEMP = PTR
+step 8: SET PREPTR-> NEXT = PTR->NEXT
+step 9: FREE TEMP
+step 10: EXIT
+
+# CIRCULAR LINKED LIST:-
+
+# Insertion
+
+1. ALgorithm to insert a new node at  begining of the circular linked list.
+
+step 1: IF AVAIL = NULL
+            write OVERFLOW
+            step 11
+step 2: SET NEW_NODE = AVAIL
+step 3: SET AVAIL = AVAIL->NEXT
+step 4: SET NEW_NODE-> DATA = VAL
+step 5: SET PTR = START
+step 6: while PTR-> NEXT!= START
+step 7:       PTR = PTR->NEXT
+step 8: SET NEW_NODE->NEXT = START
+step 9: SET PTR-> NEXT = NEW_NODE
+step 10: SET START = NEW_NODE
+step 11: EXIT
+
+2. ALgorithm to insert a new node at end of the circular linked list.
+
+step 1: IF AVAIL = NULL
+            Write OVERFLOW
+            step 10
+step 2: SET NEW_NODE = AVAIL
+step 3: SET AVAIL = AVAIL-> NEXT
+step 4: SET NEW_NODE-> DATA = VAL
+step 5: SET NEW_NODE->NEXT = START
+step 6: SET PTR = START
+step 7: While PTR-> NEXT != START
+step 8:       SET PTR = PTR-> NEXT
+step 9: SET PTR-> NEXT = NEW_NODE
+step 10: EXIT
+
+# Deletion
+
+1. ALgorithm to delete First Node
+
+step 1: IF START = NULL
+           UNDERFLOW
+           step 8
+step 2: SET PTR = START
+step 3: while PTR-> NEXT != START
+step 4:       SET PTR = PTR-> NEXT
+step 5: SET PTR-> NEXT = START->NEXT
+step 6: FREE START
+step 7: SET START = PTR->NEXT
+step 8: EXIT
+
+2. Algorithm to delete Last Node
+
+step 1: IF START = NULL
+           UNDERFLOW
+           step 8
+step 2: SET PTR = START
+step 3: While PTR-> NEXT != START
+step 4:       SET PREPTR = PTR
+step 5:       SET PTR = PTR-> NEXT
+step 6: SET PREPTR->NEXT = START
+step 7: FREE PTR
+step 8: EXIT
+
+# Doubly Linked List
+
+# Inserting a new node in doubly linked list
+
+1. Inserting at beginning
+
+step 1: IF AVAIL = NULL
+           write OVERFLOW
+           step 9
+step 2: SET NEW_NODE = AVAIL
+step 3: SET AVAIL = AVAIL->NEXT
+step 4: SET NEW_NODE -> DATA = VAL
+step 5: SET NEW_NODE -> PREV = NULL
+step 6: SET NEW_NODE -> NEXT = START
+step 7: SET START-> PREV = NEW_NODE
+step 8: SET START = NEW_NODE
+step 9: EXIT
+
+2. Inserting at end
+
+step 1: IF AVAIL =  NULL
+           write OVERFLOW
+           step 11
+step 2: SET NEW_NODE = AVAIL
+step 3: SET AVAIL = AVAIL->NEXT
+step 4: SET NEW_NODE -> DATA = VAL
+step 5: SET NEW_NODE -> NEXT = NULL
+step 6: SET PTR = START
+step 7: While PTR->NEXT!= NULL
+step 8:       SET PTR = PTR-> NEXT
+step 9: SET PTR-> NEXT = NEW_NODE
+step 10: SET NEW_NODE -> PREV = PTR
+step 11: EXIT
+
+3. Inserting after a given node
+
+step 1: IF AVAIl = NULL
+           WRITE OVERFLOW
+           step 12
+step 2: SET NEW_NODE = AVAIL
+step 3: SET AVAIL = AVAIL->NEXT
+step 4: SET NEW_NODE->DATA = VAL
+step 5: SET PTR = START
+step 6: while PTR->DATA != NUM
+step 7:       SET PTR = PTR->NEXT
+step 8: SET NEW_NODE-> NEXT = PTR->NEXT
+step 9: SET NEW_NDOE->PREV = PTR
+step 10: SET PTR->NEXT =NEW_NODE
+step 11: SET PTR->NEXT->PREV =NEW_NODE
+step 12: EXIT
+
+4. Inserting before a given node
+
+step 1: IF AVAIl = NULL
+           WRITE OVERFLOW
+           step 12
+step 2: SET NEW_NODE = AVAIL
+step 3: SET AVAIL = AVAIL->NEXT
+step 4: SET NEW_NODE->DATA = VAL
+step 5: SET PTR = START
+step 6: while PTR->DATA != NUM
+step 7:       SET PTR = PTR->NEXT
+step 8: SET NEW_NODE-> NEXT = PTR
+step 9: SET NEW_NDOE->PREV = PTR-> PREV
+step 10: SET PTR->PREV =NEW_NODE
+step 11: SET PTR->PREV->NEXT =NEW_NODE
+step 12: EXIT
+
+# Deleting a node in double linked list
+
+1. First Node is Deleted
+
+step 1: IF START =NULL
+            write UNDERFLOW
+            step 6
+step 2: SET PTR = START
+step 3: SET START = START->NEXT
+step 4: SET START-> PREV = NULL
+step 5: FREE PTR
+step 6: EXIT
+
+2. Last Node is Deleted
+
+step 1: IF START =NULL
+            write UNDERFLOW
+            step 7
+step 2: SET PTR = START
+step 3: while PTR->NEXT != NULL
+step 4:       SET PTR = PTR-> START
+step 5: SET PTR-> PREV->NEXT = NULL
+step 6: FREE PTR
+step 7: EXIT
